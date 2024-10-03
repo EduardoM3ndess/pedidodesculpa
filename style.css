@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0; /* Remove margens padrão */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    background-image: url('img/03.jpeg');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/03.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+.background-overlay {
+    position: relative;
+    background: rgba(0.3, 0.2, 0.8, 0.3);
+    backdrop-filter: blur(6px); /* Ajuste o valor do desfoque conforme necessário */
+    height: 100vh; /* Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-header{
+    height: 100px;
+    width: 100px;
+    border: 2px #000000 solid;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    background-image: url('img/02.jpeg');
+    background-repeat:round;
+    background-size: cover;
+}
+
+.title{
+    position: absolute;
+    top: 20px;
+    left: 60%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.pag
+{
+    height: 60%;
+    width: 100vw;
+    position: relative;
+}
+.text{
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    align-items: center;
+}
+
+
+.text-end{
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    align-items: center;
+    padding: 10px;
+}
+.movie {
+    position: relative; /* Faz o vídeo ocupar toda a área */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Esconde partes do vídeo que saem da área */
+}
+
+.movie video {
+    position: relative; /* Posiciona o vídeo */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    min-width: 100%; /* Garante que o vídeo ocupe toda a largura */
+    min-height: 100%; /* Garante que o vídeo ocupe toda a altura */
+    width: auto; /* Mantém a proporção do vídeo */
+    height: auto; /* Mantém a proporção do vídeo */
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+}
+
